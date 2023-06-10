@@ -1,0 +1,17 @@
+"""
+api_key = "60802247ca61d141c353d275e46921a3"
+user_input = input("Enter city: ")
+self.main_win.setWindowTitle('Weather App')
+        self.main_win.resize(400, 400)
+        self.main_win.show()weather_data = requests.get(
+    f"https://api.openweathermap.org/data/2.5/weather?q={user_input}&units=imperial&APPID={api_key}").json()
+
+
+if weather_data["cod"] == "404":
+	print("No City Found")
+else:
+    weather = weather_data["weather"][0]["main"]
+    temp = round((round(weather_data["main"]["temp"]) - 32) * (5/9), 2)
+	print(f"The weather in {user_input} is: {weather} ")
+    print(f"The weather in {user_input} is: {temp}C°")"""
+
